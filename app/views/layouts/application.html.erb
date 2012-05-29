@@ -10,5 +10,30 @@
 
 <%= yield %>
 
+
+<script type="text/javascript">
+
+var chairFunction = function() {
+  var chair = ["Chair1", "Chair2", "Chair3"];
+  for (i=0; i < chair.length; i++) {
+    console.log(chair[i]);
+  }
+};
+
+var flag = true;
+
+$("p.title").on("click", function() {
+  $(this).text("Emmet sup").css("background", "red").animate({height: "100px"});
+
+  if (flag) {
+    $("ul.list-of-stuff").append("<li>go over me</li>");  
+  }
+
+  flag = false;
+
+});
+
+</script>
+
 </body>
 </html>
