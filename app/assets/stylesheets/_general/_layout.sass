@@ -1,2 +1,57 @@
-body
+@import compass
+@import compass/utilities/general/clearfix
+
+// Grid dimensions
+$grid-width: 972px
+$grid-columns: 12
+
+// The amount of margin to apply to each side of a grid element
+$grid-gutter: 16px
+
+// The distance between the grid container and the first grid element
+$grid-outer-gutter: 16px
+
+// Use "pie-clearfix", "overflow", or "none"?
+$grid-clearfix: "pie-clearfix"
+
+// Center rows?
+$grid-centering: true
+
+// Include Lucid
+@import lucid
+
+// Output 4 CSS classes that Lucid uses as @extend "hooks"
+@include grid-init
+
+.container
+  +container
   background: red
+
+.header
+  +columns(12)
+  background: transparent asset_url("repeat_bg_header.png", image) repeat-x top left
+  height: 238px
+  position: relative
+
+.nav
+  position: absolute
+  left: 0
+  bottom: 0
+  li
+    +float(left)
+
+.spark
+  +columns(12)
+  background: blue
+
+.spark
+  +columns(12)
+  background: blue
+
+.content
+  +columns(8)
+  background: purple
+
+.aside
+  +columns(4)
+  background: pink
