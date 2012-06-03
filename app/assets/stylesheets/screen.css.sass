@@ -4,6 +4,38 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass"
+@import "compass/reset"
 
-body
-  background: red
+// Grid dimensions
+$grid-width: 990px
+$grid-columns: 12
+
+// The amount of margin to apply to each side of a grid element
+$grid-gutter: 15px
+
+// The distance between the grid container and the first grid element
+$grid-outer-gutter: 15px
+
+// Use "pie-clearfix", "overflow", or "none"?
+$grid-clearfix: "pie-clearfix"
+
+// Center rows?
+$grid-centering: true
+
+// Include Lucid
+@import 'lucid'
+
+// Output 4 CSS classes that Lucid uses as @extend "hooks"
+@include grid-init
+
+@import _general/layout
+
+.title
+  background: blue
+  +columns(1)
+.description
+  background: yellow
+  +columns(1)
+.other
+  background: green
+  +columns(1)
