@@ -1,5 +1,4 @@
-@import compass
-@import compass/utilities/general/clearfix
+// _general/_layout.sass
 
 // Grid dimensions
 $grid-width: 972px
@@ -16,21 +15,35 @@ $grid-clearfix: "pie-clearfix"
 
 // Center rows?
 $grid-centering: true
-
 // Include Lucid
 @import lucid
 
 // Output 4 CSS classes that Lucid uses as @extend "hooks"
 @include grid-init
 
+$height-top: 238px
+$height-middle: 272px
+
+.surround-top, .surround-middle, .surround-bottom, .surround-footer
+  width: 100%
+.surround-top
+  background: transparent asset_url("repeat_bg_top.png", image) repeat-x top left
+  height: $height-top
+.surround-middle
+  background: transparent asset_url("repeat_bg_middle.png", image) repeat-x top left
+  height: $height-middle
+.surround-bottom
+  background: $theme-color
+  height: 100%
+.surround-footer
+  background: white
+
 .container
   +container
-  background: red
 
 .header
   +columns(12)
-  background: transparent asset_url("repeat_bg_header.png", image) repeat-x top left
-  height: 238px
+  height: $height-top
   position: relative
 
 .nav
@@ -42,16 +55,15 @@ $grid-centering: true
 
 .spark
   +columns(12)
-  background: blue
 
 .spark
   +columns(12)
-  background: blue
 
 .content
   +columns(8)
-  background: purple
 
 .aside
   +columns(4)
-  background: pink
+
+.footer
+  +columns(12)
