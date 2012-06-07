@@ -1,13 +1,13 @@
 // _general/_type.sass
 
-@import url(http://fonts.googleapis.com/css?family=Ropa+Sans)
+@import url(http://fonts.googleapis.com/css?family=Armata)
 
 $font-family-normal: Helvetica, Arial, sans-serif
-$font-family-special: 'Ropa Sans', Futura, Impact, sans-serif
+$font-family-special: 'Armata', Futura, Impact, sans-serif
 
 
 $font-size-normal: 13px
-$font-size-medium: 16px
+$font-size-medium: 24px
 $font-size-large: 30px
 
 body
@@ -18,7 +18,23 @@ body
 a
   text-decoration: none
 
-h1, h2, h3
+h1, .h1
   font-family: $font-family-special
   font-size: $font-size-large
   line-height: 40px
+
+h2, .h2
+  font-family: $font-family-special
+  font-size: $font-size-large
+  line-height: 40px
+
+h3, .h3
+  font-family: $font-family-special
+  font-size: $font-size-medium
+  line-height: 48px
+
+.spark-styles
+  @extend .h3
+  +text-shadow(0px 1px 0px rgba(255, 255, 255, 0.7), 0px -1px 0px rgba(0, 0, 0, 0.5))
+  font-family: $font-family-special
+  color: $spark-color
