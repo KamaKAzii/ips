@@ -46,38 +46,6 @@ $height-middle: 272px
   height: $height-top
   position: relative
 
-.highlight
-  +columns(12, 0, 0)
-  +box-shadow($nav-current-shadow 0px 0px 12px)
-  background: white
-  height: 4px
-  position: absolute
-  left: 0
-  bottom: 0
-  .current
-    +box-shadow($nav-shadow 0px 0px 6px)
-    position: absolute
-    top: 0
-    left: 10px
-    width: 159px
-    height: 4px
-    background: $theme-color asset_url("menu_nav_highlight.png", image) repeat-x top left
-
-.nav
-  position: absolute
-  top: 124px
-  left: 0
-  li
-    +float(left)
-    width: 159px
-    height: 100px
-    &.current
-      +box-shadow($nav-current-shadow 0px 0px 12px)
-      background: $theme-color asset_url("menu_nav_current.png", image) repeat-x top left
-
-.highlight
-  
-
 .spark
   +columns(12)
 
