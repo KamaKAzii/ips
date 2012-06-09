@@ -1,0 +1,33 @@
+$(window).ready(function() {
+  // Preee jay-queries
+  $nav = $(".nav");
+  $lis = $nav.children("li");
+  $bar = $(".highlight .current");
+
+  // Positions
+  pos = {};
+  pos.home = 34;
+  pos.aboutUs = 304;
+  pos.contact = 463;
+  pos.services = 622;
+  pos.portfolio = 781;
+
+  // Reset its position initially to the .current li
+  $("li.current").attr("id");
+  $bar.css("left", pos[$(".nav li.current").attr("id")] + "px");
+
+  animateTo = function(target) {
+    $bar.animate({left: target + "px"}, {duration: "500", queue: false});
+  };
+
+  // Event for nav
+  $lis.children("a").mouseover(function() {
+    animateTo(pos[$(this).parents("li").attr("id")]);
+  });
+
+  // Event for logo
+  $(".logo").mouseover(function() {
+    animateTo(pos.home);
+  });
+
+});
