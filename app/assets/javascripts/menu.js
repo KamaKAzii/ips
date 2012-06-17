@@ -6,15 +6,15 @@ $(window).ready(function() {
 
   // Positions
   pos = {};
-  pos.home = 34;
-  pos.aboutUs = 304;
+  pos.index = 34;
+  pos.aboutus = 304;
   pos.contact = 463;
   pos.services = 622;
   pos.portfolio = 781;
 
   // Reset its position initially to the .current li
-  $("li.current").attr("id");
-  $bar.css("left", pos[$(".nav li.current").attr("id")] + "px");
+  var currentPage = $("body").attr("class");
+  $bar.css("left", pos[currentPage] + "px");
 
   animateTo = function(target) {
     $bar.animate({left: target + "px"}, {duration: "500", queue: false});
@@ -27,7 +27,7 @@ $(window).ready(function() {
 
   // Event for logo
   $(".logo").mouseover(function() {
-    animateTo(pos.home);
+    animateTo(pos.index);
   });
 
 });

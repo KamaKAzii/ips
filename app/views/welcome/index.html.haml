@@ -1,78 +1,18 @@
-// Backgrounds are applied through full width divs which surround the lucid containers
-.surround-top
-  .container
-    .header
-      .highlight
-        .current
-      .logo
-        IPS Solutions
-      %ul.nav
-        %li#aboutUs.current
-          %a(href="http://www.google.com")
-            ABOUT US
-        %li#contact
-          %a(href="http://www.google.com")
-            CONTACT
-        %li#services
-          %a(href="http://www.google.com")
-            SERVICES
-        %li#portfolio
-          %a(href="http://www.google.com")
-            PORTFOLIO
+.content
+  %p
+    IPS Strata Solutions is a Sydney based strata and commercial cleaning company. We aim to provide 100% satisfaction to our clients by providing timely, high quality and cost effective cleaning solutions. 
+  .focus
+    We are experts in servicing all common areas of strata residential units, commercial and office cleaning, carpet cleaning, pressure cleaning, gardening, rubbish removal and handyman work. 
+    .ornament
+      .arrow
+      .stripe
 
-.surround-middle
-  .container
-    .spark
-      %h2
-        Flexitarian exercitation stumptown, tempor craft beer nihil polaroid occupy photo booth brooklyn ethical twee incididunt.
-      .contact-information
-        .number
-          1800 123 456
-        .email
-          %a(href='mailto:main@ipssolutions.com.au' target='_blank')
-            main@ipssolutions.com.au
-        .info
-          %p
-            Feel free to call or email us.<br />
-            This is some other random text that goes here.
+  %p
+    Our policy is to provide the best quality cleaning solution to your property.  
 
-.surround-bottom
-  .container
-    .content
-      %p
-        Content goes here
-      .focus
-        .ornament
-          .arrow
-          .stripe
-        This is the focus of this page and that is cool.
-        This is the focus of this page and that is cool.
-        This is the focus of this page and that is cool.
-        This is the focus of this page and that is cool.
-        This is the focus of this page and that is cool.
-        This is the focus of this page and that is cool.
-        This is the focus of this page and that is cool.
-        This is the focus of this page and that is cool.
-        This is the focus of this page and that is cool.
-    .aside
-      The aside
+  %p
+    IPS Strata Solutions is an accredited Trades Monitor contractor.
+  %p.note
+    Being an accredited contractor ensures our clients that we have been verified as having up to date, relevant and correct insurances, licences and ABNs. It also ensures that we meet compliance requirements for OH&S Acts and Regulations by means of an assessment process. For more information on Trades Monitor please click here.
 
-.surround-footer
-  .container
-    .footer
-      %ul
-        %li
-          %a(href='/')
-            Home
-        %li
-          %a(href='/')
-            Email Us
-        %li
-          %a(href='/')
-            Services
-        %li
-          %a(href='/')
-            Portfolio
-        %li
-          %a(href='/')
-            Sitemap
+= render "aside"

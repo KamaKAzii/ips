@@ -1,0 +1,10 @@
+.content
+  %p
+    IPS Strata Solutions was established in [Month, Year] in Enfield, Sydney. Since then we have serviced clients throughout the Inner West [check] and provide both office and strata cleaning solutions in suburbs from [Lane Cove to Hornsby and Epping - check].
+     
+  %p
+    We are Occupational Health & Safety aware, trained and compliant. We observe OH&S legislation and regulations to ensure that your property is safe and comfortable for its occupants.
+
+  %p
+    Our stringent recruitment process ensures that all cleaners servicing your property are professionally trained to ensure you receive consistently high quality cleaning solutions.
+= render "aside"

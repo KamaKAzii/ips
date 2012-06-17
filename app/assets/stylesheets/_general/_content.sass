@@ -1,0 +1,35 @@
+// _general/_content.sass
+
+// ASIDE Aside aside
+.aside
+  .strata-community-logo
+    width: 260px
+    height: 100px
+    background: asset_url("strata_community_logo.png", image) no-repeat 17px 9px white
+    margin-bottom: 16px
+
+  .trades-monitor-logo
+    width: 260px
+    height: 116px
+    background: asset_url("trades_monitor_logo.png", image) no-repeat left top white
+    margin-bottom: 16px
+
+// INDEX Index index
+.index
+  .note
+    font-size: 11px
+    line-height: 16px
+
+// SERVICES Services services
+
+.services
+  ul.services
+    +pie-clearfix
+  ul.services li
+    +float(left)
+    font-weight: bold
+    width: 137px
+    margin-right: 76px
+    &:nth-child(3n)
+      margin-right: 0
+

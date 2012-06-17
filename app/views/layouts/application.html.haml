@@ -1,9 +1,19 @@
 !!! 5
 %html
   %head
-    %title Ips
+    %title
+      = "IPS Solutions - " + @page.capitalize
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body
-    =yield
+  %body(class="#{@page}")
+
+    = render "header"
+
+    = render "spark"
+
+    .surround-bottom
+      .container
+        = yield
+
+    = render "footer"
