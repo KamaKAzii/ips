@@ -1,28 +1,46 @@
 .content
+  - if flash[:alert]
+    .alert
+      = flash[:alert]
 
-  %address
-    IPS Strata Solutions<br />
-    PO Box 126<br />
-    ENFIELD NSW 2136<br />
+  .information
+    %address
+      IPS Strata Solutions<br />
+      PO Box 126<br />
+      ENFIELD NSW 2136<br />
 
-  %p
-    Please do not hesitate to call us for an obligation-free quote. We are happy to discuss your cleaning requirements and can come up with a solution suited to your needs. 
+    %p
+      Please do not hesitate to call us for an obligation-free quote. We are happy to discuss your cleaning requirements and can come up with a solution suited to your needs. 
 
-  %p
-    For all enquiries, please contact us via:   
+    %p
+      For all enquiries, please contact us via:   
 
-  %address
-    Phone: (02) 9703 6850<br />
-    Fax: (02) 9703 6850<br />
-    Mobile: 0415 888 009<br />
-    Email: <a href="sebastian@ipssolutions.com.au" target="_blank">sebastian@ipssolutions.com.au</a><br />
+    %address
+      Phone: (02) 9703 6850<br />
+      Fax: (02) 9703 6850<br />
+      Mobile: 0415 888 009<br />
+      Email: <a href="sebastian@ipssolutions.com.au" target="_blank">sebastian@ipssolutions.com.au</a><br />
 
-  %form 
-    Full name<br />
-    Email Address<br />
-    Contact Number<br />
-    Company<br />
-    Address<br />
-    Enquiry<br />
+  = form_for @enquiry, :url => { :action => "mailer"} do |f|
+    .input-group.name
+      = f.label :name, "Full Name:"
+      = f.text_field :name
+    .input-group.email
+      = f.label :email, "Email Address:"
+      = f.text_field :email
+    .input-group.number
+      = f.label :number, "Contact Number:"
+      = f.text_field :number
+    .input-group.company
+      = f.label :company, "Company:"
+      = f.text_field :company
+    .input-group.address
+      = f.label :address, "Address:"
+      = f.text_field :address
+    .input-group.message
+      = f.label :message, "Enquiry:"
+      = f.text_area :message, :value => "Please type your enquiry here"
+    .input-group.actions
+      = f.submit "Send us your enquiry"
 
 = render "aside"

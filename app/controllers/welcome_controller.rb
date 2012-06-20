@@ -9,6 +9,19 @@ class WelcomeController < ApplicationController
   end
 
   def contact
+    @enquiry = Enquiry.new
+  end
+
+  def mailer
+    @enquiry = Enquiry.new(params[:enquiry])
+
+    if @enquiry.save
+      flash[:alert] = "Your enquiry was sent to us. We will be in touch shortly."
+    else
+      flash[:alert] = "There was an error. Please try again."
+    end
+    redirect_to :action => "contact"
+
   end
 
   def services
