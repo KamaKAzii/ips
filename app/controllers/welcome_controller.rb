@@ -17,6 +17,7 @@ class WelcomeController < ApplicationController
 
     if @enquiry.save
       flash[:alert] = "Your enquiry was sent to us. We will be in touch shortly."
+      EnquiryMailer.mail(@enquiry).deliver
     else
       flash[:alert] = "There was an error. Please try again."
     end
