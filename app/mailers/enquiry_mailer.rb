@@ -3,6 +3,6 @@ class EnquiryMailer < ActionMailer::Base
 
   def enquiry_email(enquiry)
     @enquiry = enquiry
-    mail(:to => "enquiries@ipssolutions.com.au", :subject => "Enquiry from website")
+    mail(:to => "ipsstratasolutions@gmail.com", :subject => "Enquiry from website")
   end
 end
